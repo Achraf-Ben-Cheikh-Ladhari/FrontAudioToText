@@ -1,0 +1,13 @@
+.btn-mic,
+.btn-stop {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.btn-mic img,
+.btn-stop img {
+    width: 30px;
+    opacity: 0.5;
+}

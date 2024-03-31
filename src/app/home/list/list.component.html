@@ -1,0 +1,48 @@
+  <!-- blog warpper start -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-title">
+            <span>Record Your Voice!</span>
+          </h2>
+        </div>
+      </div>
+      <div class="row gy-5 gx-4 g-xl-5">
+        <div class="col-lg-12" >
+          <article class="card post-card h-100 border-0 bg-transparent">
+            <div class="card-body">
+              <a class="d-block" >
+                <div class=" position-relative">
+                  <textarea class="form-control" rows="10" #userinput></textarea>
+                </div>
+              </a>
+              <ul class="card-meta list-inline mb-3 text-center">
+                <li class="list-inline-item mt-2">
+                  <button title="Click here to start recording action" class="btn-mic w-auto" 
+                  (click)="startRecording()"
+                    *ngIf="!isRecording" style="margin-right: 3px;">
+                  <img src="assets/assets/images/mic.png" />
+                </button>
+                <button title="Click here to stop recording" class="btn-stop w-auto" 
+                (click)="stopRecording()"
+                *ngIf="isRecording"  style="margin-right: 3px;">
+                  <img src="assets/assets/images/stop.png" />
+                </button>
+                </li>
+                <li class="list-inline-item mt-2">—</li>
+                <li class="list-inline-item mt-2">
+                <button (click)="copyInputMessage(userinput)" value="click to copy" type="button" class="btn btn-secondary">Copy</button>
+                </li>
+              </ul>
+              <div class="text-center">
+                <span id="recording" >{{recording}}</span>
+              </div>
+            </div>
+           
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- blog warpper end -->
